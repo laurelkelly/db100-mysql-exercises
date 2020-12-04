@@ -1,5 +1,5 @@
 const chai = require('chai');
-const mysql = require('mysql');
+const mysql = require('mysql2');
 const fs = require('fs');
 const path = require('path');
 const async = require('async');
@@ -224,7 +224,7 @@ describe('SQL Exercises -', function () {
   });
 
   describe('ORDER BY statement -', () => {
-    it('8a - Select films ordered by length in descending order', () => {
+    it('8a - Select films ordered by length in ascending order', () => {
       gradeExercise(results[25], 1000, allFilmColumns);
     });
     it('8b. Select distinct ratings ordered by rating in descending order', () => {
